@@ -95,8 +95,6 @@ class Jt_Instagram_Api {
 			return $recent_media;
 		}
 
-		$recent_media = false;
-
 		$user_id = $this->get_user_id($username);
 
 		$defaults = array(
@@ -128,8 +126,6 @@ class Jt_Instagram_Api {
 		if ( false !== ( $user_id = get_transient( $username . '_instagram_user_id' ) ) ) {
 			return $user_id;
 		}
-
-		$user_id = false;
 
 		$parameters = array(
 			'q'            => $username,
